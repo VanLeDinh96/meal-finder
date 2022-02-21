@@ -1,0 +1,21 @@
+<h1 ngClass="center">{{randomMeal?.strMeal}}</h1>
+
+<b>TAGS</b>
+<p>{{randomMeal?.strTags}}</p>
+
+<b>INGREDIENTS</b>
+<li *ngFor="let ingredient of listIngredients">
+    <ul>{{ingredient}}</ul>
+</li>
+
+<b>INSTRUCTIONS</b>
+<div [innerHTML]="randomMeal?.strInstructions"></div>
+
+<b>THUMBNAIL</b>
+<br />
+<img height="200" width="200" [src]="randomMeal?.strMealThumb">
+<br />
+
+<b>SEE VIDEO HERE</b>
+<br />
+<button mat-raised-button color="primary" (click)="onNavigate()">VIDEO</button>
